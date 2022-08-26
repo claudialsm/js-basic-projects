@@ -145,8 +145,24 @@ main {
   margin-bottom: 5rem;
 }
 
-.colour {
+.input-colour {
+  width: 40%;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-black);
+  border: 2px solid var(--clr-black);
+  outline: none;
+  box-sizing: var(--light-shadow);
+  font-size: 1rem;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.colour-name {
+  display: block;
   color: var(--clr-primary-5);
+  margin-top: 2.5rem;
 }
 
 /*
@@ -172,4 +188,42 @@ Button
 .btn-hero:hover {
   color: var(--clr-white);
   background: var(--clr-black);
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    overflow-x: none;
+  }
+
+  nav a {
+    align-items: center;
+    /* justify-items: center; */
+  }
+
+  nav a:last-child {
+    margin-right: 0.25rem;
+  }
+
+  .container h1 {
+    padding: 1rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    border-radius: 0;
+    margin-bottom: 2rem;
+  }
+
+  .colour-name {
+    margin-top: 1rem;
+  }
+
+  .input-colour {
+    width: 55%;
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .btn-hero {
+    padding: 1rem 2rem;
+    letter-spacing: var(--spacing);
+  }
 }
