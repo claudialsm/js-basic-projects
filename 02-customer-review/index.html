@@ -4,19 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Reviews</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- style -->
     <link rel="stylesheet" href="style.css" />
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&display=swap"
       rel="stylesheet"
     />
-    <title>Customer Reviews</title>
   </head>
   <body>
     <main>
-      <div class="container"></div>
+      <div class="container">
+        <h1 class="title">Our Reviews</h1>
+        <div class="review-container">
+          <img class="customer-1" src="person-1.jpeg" alt="customer1-picture" />
+          <h3 class="customer1-name">Sara Jones</h3>
+          <p class="customer1-role">UX Designer</p>
+          <p class="customer1-review">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            asperiores debitis incidunt, eius earum ipsam cupiditate libero?
+            Iste, doloremque nihil?
+          </p>
+          <!-- prev next buttons -->
+          <div class="button-container">
+            <button class="prev-btn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="next-btn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <!-- random button -->
+          <button class="btn random-btn">Surprise Me</button>
+        </div>
+      </div>
     </main>
+    <!-- javascript -->
     <script src="script.js"></script>
   </body>
 </html>
