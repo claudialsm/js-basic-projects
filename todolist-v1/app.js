@@ -2,11 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
+let toDos = ['Buy groceries', 'Cook', 'Eat'];
+
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
-let toDos = ['Buy groceries', 'Cook', 'Eat'];
+// specify location of public files
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
   let today = new Date();
