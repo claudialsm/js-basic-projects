@@ -1,5 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+// we have a module called date
+const date = require(__dirname + '/date.js');
+
 const app = express();
 
 let toDos = ['Buy groceries', 'Cook', 'Eat'];
@@ -11,14 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (req, res) {
-  let today = new Date();
-  let options = {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-  };
-  let day = today.toLocaleDateString('en-US', options);
-
+  // call date function
+  let day = date.getDay();
   res.render('list', { kindofDay: day, newListItems: toDos });
 });
 
